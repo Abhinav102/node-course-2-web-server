@@ -33,7 +33,7 @@ app.use(express.static(__dirname + '/public' ));
 
 hbs.registerHelper('getCurrentYear',() => {
     return new Date().getFullYear() // it gets the actuall date of the javascript constructor
-});
+});  
 
 hbs.registerHelper('screamIt',(text) => {
     return text.toUpperCase();
@@ -65,6 +65,12 @@ app.get('/about',(req,res) => {
         pageTitle : 'About Page',
     }); // Render is gonna let you render any of the templates you have set up with your current view engine
 }); 
+
+app.get('/projects',(req,res) => {
+    res.render('projects.hbs', {
+        pageTitle:'Projects'
+    });
+});
 
 app.get('/bad',(req,res) => {
     res.send({
