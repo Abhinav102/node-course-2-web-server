@@ -62,7 +62,7 @@ app.get('/',(req,res) =>{
 
 app.get('/about',(req,res) => {
     res.render('About.hbs',{
-        pageTitle : 'About Page',
+        pageTitle : 'About Page'
     }); // Render is gonna let you render any of the templates you have set up with your current view engine
 }); 
 
